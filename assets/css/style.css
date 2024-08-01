@@ -1,0 +1,1391 @@
+:root {
+    --secondary-bg: linear-gradient(0deg, rgb(9, 8, 34) 20%, rgb(0, 43, 231) 60%);
+    --primary-color: #020228;
+    --secondary-color: #ff00e5;
+    --tertiary-color: #b535f6;
+    --btn-bg-color-gradient: linear-gradient(
+      45deg,
+      #9b34ef 0%,
+      #490cb0 20%,
+      transparent 50%
+    );
+    --btn-link-bg-color: #fff;
+    --btn-link-color: #000;
+    --card-bg-color: linear-gradient(0deg, transparent, #3b1e63);
+    --divider-bg-color: linear-gradient(
+      90deg,
+      #5516ba,
+      rgba(255, 0, 229, 0.5) 80%
+    );
+    --nav-bg-color: rgba(0, 0, 0, 0.3);
+    --text-color: #fff;
+    --link-color: #9e86ff;
+    --form-bg-color: rgba(211, 211, 211, 0.06);
+    --form-field-bg-color: rgba(0, 0, 0, 0.2);
+    --form-field-border: 1px solid rgba(255, 255, 255, 0.7);
+    --form-field-placeholder: rgba(255, 255, 255, 0.7);
+    --form-field-error: rgb(255, 76, 76);
+
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: raleway;
+    src: url(/hbomax/assets/fonts/Raleway-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: quicksand;
+    src: url(/hbomax/assets/fonts/Quicksand-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'quicksand light';
+    src: url(/hbomax/assets/fonts/Raleway-Light.ttf);
+}
+
+*{
+    text-decoration: none;
+}
+
+body{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: quicksand;
+    background: var(--primary-color);
+}
+
+header{
+    background: var(--primary-color);
+}
+
+.top-link{
+    max-width: 200px;
+}
+.top-link img{
+    width: 100%;
+}
+
+ul, ul a, ul a li{
+    display: flex;
+    padding: 0;
+    color: white;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+.flex-display{
+    display: flex;
+    flex-direction: row;
+    height: 3vh;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    color: white;
+    list-style-type: none;
+    text-transform: uppercase;
+    font-family: raleway;
+    font-size: .825rem;
+}
+
+.menu-button-links button a{
+    font-size: .850rem;
+    text-transform: uppercase;
+    font-family: raleway;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.menu-button-links button {
+    background-color: transparent;
+    border: 0;
+}
+
+.menu-button-links .register{
+    background-color: var(--tertiary-color);
+    padding: .5rem 2rem;
+    border-radius: 30px;
+    margin-left: 1rem;
+}
+
+.menu-button-links .register:hover{
+    background-color: white;
+    color: black;
+    transition: 1s;
+}
+
+.primary-bg{
+    background: linear-gradient(190deg, #9b34efb3 10%, #490cb0 50%, transparent 90%);
+    animation: gradient 5s linear infinite;
+}
+
+@keyframes gradient {
+    0%{
+        background-position: 0% 50%;
+    }
+    20%{
+        background-position: 100% 50%;
+    }
+    40%{
+        background-position: 100% 100%;
+    }
+    60%{
+        background-position: 100% 50%;
+    }
+    80%{
+        background-position: 0% 100%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+main #central-page{
+    height: 90vh;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'quicksand light';
+    font-weight: 100;
+}
+
+main #central-page h1{
+    margin: 3rem auto;
+    width: 70%;
+}
+
+main #central-page .destaque {
+    font-family: raleway;
+    font-weight: bold;
+    font-size: 3.5rem;
+}
+
+main .centralize{
+    margin: auto 25%;
+    padding: 4rem;
+}
+
+main #central-page .divisoes-logo{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+main #central-page #divisor{
+    border-bottom: 5px solid rgba(255, 0, 229, 0.5);
+}
+
+.centralize h2{
+    font-family: raleway;
+    font-weight: normal;
+    font-size: 1.5rem;
+    text-transform: none;
+    width: 40%;
+    margin: 4rem auto 2rem;
+}
+
+.centralize h2 .mensalidade {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.centralize h3{
+    font-family: raleway;
+    font-weight: normal;
+    font-size: 1rem;
+    width: 30%;
+    text-transform: none;
+    margin: 2.5rem auto;
+}
+
+.assine-button{
+    background: linear-gradient(
+        45deg,
+        #9b34ef 40%,
+        #490cb0 80%,
+        transparent 100%
+      );
+      padding: 1rem 3rem;
+      border-radius: 40px;
+      font-family: quicksand;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: white;
+      border: 0;
+      font-size: 1rem;
+      letter-spacing: 1px;
+}
+
+.animation-button{
+    animation: movingButton 1.5s linear 5s infinite;
+}
+#tipos-planos{
+    padding-bottom: 10vh;
+    background: url('/hbomax/assets/images/background-movies-series.png');
+    background-size: cover;
+}
+
+#tipos-planos #tipos-planos-section{
+    text-align: center;
+    color: white;
+    font-family: raleway;
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem auto;
+    width: 80%;
+}
+
+#tipos-planos #tipos-planos-section h3{
+    margin: 4rem 0;
+}
+
+#cards-centralize{
+    display: flex;
+    margin-top: 1rem;
+    justify-content: center;
+    perspective: 2000px;
+    perspective-origin: top;
+}
+
+#cards-centralize .card{
+    margin-right: 5rem;
+    width: 30%;
+    height: 70vh;
+    padding: 2rem 3rem;
+    background: linear-gradient(
+        170deg,
+        #5516ba 10%,
+        rgba(255, 0, 229, 0.5),
+        transparent 80%
+    );
+    font-family: quicksand;
+    font-size: 1.5rem;
+    border-radius: 30px;
+    text-align: center;
+}
+
+#cards-centralize:hover > #rotate-right:not(:hover){
+    transform: rotateY(50deg);
+    transition: 2s;
+}
+
+#rotate-right:hover ~ #rotate-left{
+    transform: rotateY(-50deg);
+    transition: 2s;
+}
+
+#cards-centralize .card .card-detalhes{
+    display: flex;
+    justify-content: space-between;
+}
+
+#cards-centralize .card .card-detalhes h4{
+    font-family: 'quicksand light';
+}
+
+#cards-centralize .card .card-detalhes .destaque-rosa{
+    font-size: 2rem;
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-family: raleway;
+}
+
+#cards-centralize .card .card-beneficios ul{
+    list-style-type: "+";
+    margin: 1rem;
+    margin-bottom: 15rem;
+    padding: 0;
+    text-align: left;
+    display: block;
+}
+
+#cards-centralize .card .card-beneficios ul li{
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    font-size: 1.3rem;
+}
+
+#mostruario-filmes{
+    padding: 3rem 0 ;
+    margin: 2rem auto;
+    align-items: center;
+    width: 70%;
+    color: white;
+    text-align: center;
+    font-family: raleway;
+    font-size: 2rem;
+}
+
+#mostruario-filmes h3{
+    font-weight: normal;
+}
+
+#centralize-filmes{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 4rem;
+}
+
+#centralize-filmes div{
+    height: 50vh;
+}
+
+#hbo{
+    background: url('/hbomax/assets/images/hbo-default_0.webp');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 80%;
+    border-radius: 30px;
+}
+
+#max{
+    background: url('/hbomax/assets/images/MAX-Default.webp');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 80%;
+    border-radius: 30px;
+}
+
+#dc{
+    background: url('/hbomax/assets/images/DC_Default.webp');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 80%;
+    border-radius: 30px;
+}
+#wb{
+    background: url('/hbomax/assets/images/WB-Default.webp');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 80%;
+    border-radius: 30px;
+}
+
+#cn{
+    background: url('/hbomax/assets/images/CN-Default.webp');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 80%;
+    border-radius: 30px;
+}
+
+#cl{
+    background: url('/hbomax/assets/images/UCL-Default.webp');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 80%;
+    border-radius: 30px;
+}
+
+#hbo:hover{
+    background: url('/hbomax/assets/images/hbo-hover_0.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 1s;
+    background-position: center;
+    animation: changeImage 1s linear;
+    transform: scale(1.1);
+    border: 3px solid #9b34ef;
+    border-radius: 30px;
+}
+
+#max:hover{
+    background: url('/hbomax/assets/images/MAX-Hover.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 1s;
+    background-position: center;
+    animation: changeImage 1s linear;
+    transform: scale(1.1);
+    border: 3px solid #9b34ef;
+    border-radius: 30px;
+}
+
+#dc:hover{
+    background: url('/hbomax/assets/images/DC-Hover.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 1s;
+    background-position: center;
+    animation: changeImage 1s linear;
+    transform: scale(1.1);
+    border: 3px solid #9b34ef;
+    border-radius: 30px;
+}
+
+#wb:hover{
+    background: url('/hbomax/assets/images/WB-Hover.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 1s;
+    background-position: center;
+    animation: changeImage 1s linear;
+    transform: scale(1.1);
+    border: 3px solid #9b34ef;
+    border-radius: 30px;
+}
+
+#cn:hover{
+    background: url('/hbomax/assets/images/CN-Hover.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 1s;
+    background-position: center;
+    animation: changeImage 1s linear;
+    transform: scale(1.1);
+    border: 3px solid #9b34ef;
+    border-radius: 30px;
+}
+
+#cl:hover{
+    background: url('/hbomax/assets/images/UCL-Hover.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 1s;
+    background-position: center;
+    animation: changeImage 1s linear;
+    transform: scale(1.1);
+    border: 3px solid #9b34ef;
+    border-radius: 30px;
+}
+
+@keyframes changeImage{
+    0% {
+        opacity: 0.5;
+        transform: scale(1.1);
+        border: 3px solid #9b34ef;
+        border-radius: 30px;
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1.1);
+        border: 3px solid #9b34ef;
+        border-radius: 30px;
+    }
+}
+
+#centralize-filmes figure img{
+    max-width: 100%;
+    max-height: 80%;
+}
+
+footer{
+    color: var(--link-color);
+    text-align: center;
+    font-size: .725rem;
+}
+
+footer nav ul{
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+}
+
+footer nav .others li{
+    margin-right: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--link-color);
+}
+
+footer nav .others li:hover{
+    color: white;
+    transition: 1s;
+    cursor: pointer;
+}
+
+footer .redes-sociais{
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+
+footer .redes-sociais img {
+    margin: 0 1rem;
+}
+
+.section-content{
+    margin: 1rem auto;
+    color: white;
+    align-items: center;
+}
+
+#mapa-header{
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 5rem 20%;
+}
+
+.align-sessions{
+    margin: 2rem 20%;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: raleway;
+}
+
+.sessoes-content{
+    background: linear-gradient(black, #020228);
+    padding: 3rem 0;
+}
+
+.series-info{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    font-size: .825rem;
+    margin: 3rem 0 8rem 0;
+    font-family: quicksand;
+}
+
+.series-info a {
+    color: white;
+    font-weight: normal;
+}
+
+.footer-secondary{
+    margin: 4rem 0;
+    color: white;
+    font-family: raleway;
+}
+
+.footer-secondary nav .more-info li {
+    text-transform: capitalize;
+}
+
+.footer-secondary nav ul li{
+    color: white;
+}
+
+.footer-secondary nav .more-info{
+    width: 50%;
+    margin: 2rem 25%;
+}
+
+.mostruario-header-filmes, .mostruario-header-series{
+    color: white;
+    font-size: 2rem;
+    margin: 4rem 20%;
+    text-transform: lowercase;
+    font-family: raleway;
+    text-align: center;
+}
+
+.mostruario-header-filmes h1, .mostruario-header-series h1{
+    font-weight: 600;
+}
+
+.secondary-bg{
+    background: linear-gradient(0deg, rgb(9, 8, 34) 75%, rgb(0, 43, 231));
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.align-text{
+    font-size: 1.5rem;
+    text-transform: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.align-text h3, .align-text h2{
+    margin: 0;
+    font-weight: 600;
+}
+
+.align-text h3{
+    margin-left: 3rem;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+.centralize-filmes-secondary, .centralize-series-secondary{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.centralize-filmes-secondary figure, .centralize-series-secondary figure{
+    margin: 0;
+    height: fit-content;
+}
+
+.centralize-filmes-secondary figure img, .centralize-series-secondary figure img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.assine-button-secondary{
+    background: rgb(0, 43, 231);
+    padding: 1rem 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.categorias-filmes, .categorias-series{
+    color: white;
+    font-size: 2rem;
+    font-family: raleway;
+}
+
+.categorias-filmes h3, .categorias-series h3{
+    margin: 0;
+    margin-left: 1rem;
+}
+
+.agrupacao-fimes, .agrupacao-series, .agrupacao{
+    display: flex;
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.agrupacao-fimes figure, .agrupacao-series figure{
+    margin: 0 1rem;
+    margin-top: 1rem;
+    min-width: fit-content;
+    flex-shrink: 0;
+}
+
+.agrupacao-fimes figure figcaption, .agrupacao-series figure figcaption{
+    font-size: .825rem;
+    font-weight: bold;
+    color: white;
+}
+
+.mostruario-content-filmes, .mostruario-content-series{
+    margin: auto;
+    width: fit-content;
+}
+
+.filme-thumbnail{
+    background: linear-gradient(0deg, #060212, transparent 90%, transparent 70%, #07071c), url(https://beam-images.warnermediacdn.com/2024-06/banner-background-dsk-2_0.jpg?host=wbd-dotcom-drupal-prd-us-east-1.s3.amazonaws.com&w=1920);
+    background-size: cover;
+    height: 80vh;
+    color: white;
+}
+
+body{
+    background-color: #060212;
+}
+
+.filme-thumbnail #thumbnail-display{
+    margin: auto 20%;
+    display: flex;
+    flex-direction: row;
+}
+
+.filme-thumbnail #thumbnail-display .thumbnail-content{
+    width: 50%;
+    height: 70vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+
+.filme-thumbnail #thumbnail-display .thumbnail-content img{
+    max-width: 50%;
+}
+
+.filme-thumbnail #thumbnail-display .thumbnail-content .thumbnail-resumo{
+    display: inline-block;
+}
+
+.filme-thumbnail #thumbnail-display .thumbnail-content .thumbnail-resumo .more-info{
+    display: flex;
+}
+
+.filme-thumbnail #thumbnail-display .thumbnail-content .thumbnail-resumo .more-info h2{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: raleway;
+    font-size: .825rem;
+    margin-right: 1.5rem;
+}
+
+.menu-button-links button{
+    padding: 0;
+    margin: 2rem 0;
+}
+
+#filme-titulo-bold{
+    font-weight: bold;
+}
+
+.thumbnail-resumo p{
+    font-size: 1.1rem;
+}
+
+.agrupacao-fimes-rows{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.signNow{
+    text-align: center;
+    color: white;
+    background: linear-gradient(320deg, rgba(0,51,255,.8) 0%, rgba(0,0,102,1) 50%);
+    padding: 3rem;
+}
+
+.signNow h4{
+    font-size: 2.5rem;
+    font-family: raleway;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.agrupacao-series::after{
+    content: ">";
+    color: white;
+    font-size: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.episodios-gratis-thumbnail{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 19.6%), radial-gradient(97.07% 97.07% at 60.4% -13.07%, rgba(0, 0, 0, 0) 56.64%, #060212 100%), url('https://beam-images.warnermediacdn.com/2024-06/hero_hotd_0.jpg?host=wbd-dotcom-drupal-prd-us-east-1.s3.amazonaws.com&w=1920');
+    background-size: cover;
+    height: 80vh;
+    color: white;
+}
+
+.thumbnail-episodios-content{
+    margin: auto;
+    width: 50%;
+    height: 70vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    font-family: raleway;
+}
+
+.thumbnail-episodios-content h1{
+    font-size: 2.5rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.thumbnail-episodios-content p{
+    font-size: 1rem;
+    margin: 1rem;
+}
+
+.assine-button-terciary{
+    background: white;
+    border: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    color: black;
+    font-size: .825rem;
+}
+
+.episodio-amostra-display{
+    margin: auto;
+    width: 60%;
+}
+
+.episodio-amostra{
+    display: flex;
+    color: white;
+    align-items: center;
+}
+
+.episodio-amostra-content{
+    margin: 0 1.5rem;
+    font-family: raleway;
+    width: 50%;
+    font-size: 1.2rem;
+}
+
+.episodio-amostra-content h1{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.mais-comentadas{
+    background: linear-gradient(0deg, #060212, transparent 30%, transparent 70%, #060212), url('https://beam-images.warnermediacdn.com/2024-06/banner-background-dsk-2_0.jpg?host=wbd-dotcom-drupal-prd-us-east-1.s3.amazonaws.com&w=1920');
+    background-size: cover;
+    height: 30vh;
+    color: white;
+    font-size: 1.5rem;
+    font-family: raleway;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin: 5rem 0;
+}
+
+.mais-comentadas-display{
+    margin: auto 15%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.series-display img{
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+
+.series-display{
+    display: flex;
+    flex-direction: column;
+}
+
+.estreias-gratis{
+    max-width: 1440px;
+    margin: auto;
+    color: white;
+    text-align: center;
+    font-family: raleway;
+    margin-top: 4rem;
+}
+
+.estreias-gratis h3{
+    font-size: 2rem;
+}
+
+.agrupacao, .agrupacao figcaption, .agrupacao p, .agrupacao a{
+    text-align: left;
+    font-size: 1rem;
+    color: white;
+    justify-content: center;
+    align-items: top;
+}
+
+.agrupacao-rows{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.agrupacao figure{
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.agrupacao figcaption{
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.agrupacao p{
+    font-size: .725rem;
+}
+
+.agrupacao a{
+    text-transform: uppercase;
+    font-size: .825rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.agrupacao a::after{
+    content: ">";
+    font-size: .825rem;
+    color: white;
+    margin-left: 5px;
+}
+
+.destaque-melhores-ep-gratis{
+    background: linear-gradient(0deg, #060212, transparent 20%, transparent 100%, #060212), url('https://beam-images.warnermediacdn.com/2024-06/qons_background_0.jpg?host=wbd-dotcom-drupal-prd-us-east-1.s3.amazonaws.com&w=2000');
+    background-size: cover;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.destaque-melhores-ep-gratis-02{
+    background: linear-gradient(0deg, #060212, transparent 20%, transparent 100%, #060212), url('https://beam-images.warnermediacdn.com/2024-06/selling_the_hamptons_background.jpg?host=wbd-dotcom-drupal-prd-us-east-1.s3.amazonaws.com&w=2000');
+}
+
+.destaque-melhores-ep-gratis-display{
+    display: flex;
+    align-items: center;
+    width: 60%;
+    height: 80%;
+}
+
+.destaque-melhores-ep-gratis-display img, .text-wrapper img{
+    height: 100%;
+    max-width: 100%;
+}
+
+.text-wrapper{
+    margin: 0 2rem;
+    font-size: 1.3rem;
+    width: 400px;
+}
+
+.text-wrapper p{
+    margin: 0;
+}
+
+.perguntas-info-display{
+    color: white;
+    font-family: raleway;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.perguntas-info-display h4{
+    margin: 0;
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.perguntas-info-display details{
+    text-align: left;
+    font-size: 1.5rem;
+    width: 70%;
+}
+
+.perguntas-info-display details {
+    max-width: 100%;
+}
+
+.perguntas-info-display details summary{
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.7);
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    padding: 2rem 0;
+}
+
+.perguntas-info-display details summary::marker{
+    content: "";
+}
+
+.perguntas-info-display details summary::after{
+    content: ">";
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.perguntas-info-display details summary:hover{
+    color: white;  
+    cursor: pointer;
+}
+
+.sample-sports-page{
+    height: 70vh;
+    background: url('https://beam-images.warnermediacdn.com/2024-07/AMISTOSOS-LANDING-PAGE-MAX---DESKTOP.jpg?host=wbd-dotcom-drupal-prd-us-east-1.s3.amazonaws.com&w=1900');
+    background-size: cover;
+}
+
+#gradient-divisor{
+    height: 5vh;
+    background: linear-gradient(rgb(10, 3, 191)0%, rgb(10, 3, 191) 100%);
+}
+
+.next-games{
+    justify-content: center;
+    align-items: center;
+    height: 45vh;
+    background: radial-gradient(circle, rgb(17, 6, 224) 10%, rgb(3, 3, 151) 75%);
+}
+
+.agrupacao-jogos{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: 80%;
+}
+
+.agrupacao-jogos figure{
+    margin: 0;
+    color:white;
+    font-family: raleway;
+}
+
+.agrupacao-jogos figure img{
+    width: 100%;
+}
+
+.agrupacao-jogos figcaption, .agrupacao-jogos h2, .agrupacao-jogos h3, .agrupacao-jogos p{
+    margin: 0;
+    margin-bottom: .5rem;
+}
+
+.agrupacao-jogos figcaption, .agrupacao-jogos p{
+    margin-top: .5rem;
+    font-size: .725rem;
+    color: rgba(255,255,255,.7);
+    font-weight: 600;
+}
+
+.agrupacao-jogos h2{
+    font-size: .925rem;
+}
+
+.agrupacao-jogos h3{
+    font-size: .825rem;
+    font-weight: normal;
+}
+
+.align{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.align h1{
+    font-weight: bold;
+    color: white;
+    font-family: raleway;
+    font-size: 2rem;
+    margin: 0;
+    padding: 1.5rem;
+}
+
+.em-breve-sports{
+    background: url('https://beam-images.warnermediacdn.com/2024-07/CHAMPIONS-LEAGUE-LANDING-PAGE-secundaria-MAX---DESKTOP-Direita.png?host=wbd-dotcom-drupal-prd-us-east-1.s3.amazonaws.com&w=1919');
+    height: 70vh;
+    background-size:cover;
+}
+
+.destaque-sports{
+    background: url('https://beam-images.warnermediacdn.com/2024-05/ucl_banner_romario_dsk.jpg?host=wbd-dotcom-drupal-prd-us-east-1.s3.amazonaws.com&w=1919');
+    height: 70vh;
+    background-size:cover;
+}
+
+.em-breve-text{
+    width: fit-content;
+    text-align: center;
+    height: min-content;
+}
+
+.destaque-text h4, .destaque-text p{
+    color: #012CE6;
+    font-weight: normal;
+    font-family: raleway;
+    margin: 0;
+}
+
+.destaque-text h4{
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.destaque-text p{
+    font-size: 1.5rem;
+}
+
+.em-breve-text{
+    color: white;
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-family: raleway;
+    margin: 0;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.em-breve-text img{
+    max-width: 40%;
+}
+
+.em-breve-display{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+}
+
+#sports-recs h4{
+    color: white;
+    font-family: raleway;
+    font-size: 2rem;
+    font-weight: normal;
+    padding: 2rem;
+}
+
+#sports-recs{
+    background: radial-gradient(60% 60% at 50% 50%, #006 0%, transparent 90%);
+}
+
+.agrupacao-jogos{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#kids-initial-page{
+    background: linear-gradient(transparent 20%, rgb(3 6 38) 100%), url('https://beam-images.warnermediacdn.com/2024-02/hero-template-kids-desktop.jpg?host=wbd-dotcom-drupal-prd-us-east-1.s3.amazonaws.com&w=1920');
+    background-size: cover;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.highlight-text, .highlight-text h1{
+    color: white;
+    font-size: 3rem;
+    font-family: raleway;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+}
+
+.highlight-text h1, .highlight-text button, .highlight-text div{
+    margin-bottom: .5rem;
+}
+
+main{
+    background: linear-gradient(0deg, rgb(3 6 38) 65%, rgb(7 23 171) 90%) !important;
+}
+
+.kids-display-options{
+    margin: 10rem auto;
+}
+
+.footer-terciary{
+    background-color: rgb(3 6 38);
+    margin: 3rem;
+}
+
+@keyframes movingButton {
+    0%, 10%{
+        transform: rotate(0deg);
+    }
+    15%{
+        transform: rotate(-15deg);
+    }
+    25%{
+        transform: rotate(10deg);
+    }
+    30%{
+        transform: rotate(-10deg);
+    }
+    35%{
+        transform: rotate(-10deg);
+    }
+    40%, 100%{
+        transform: rotate(0deg);
+    }
+}
+
+@media (max-width:400px){
+    header .menu .logo img {
+        width: 100px;
+    }
+    header .menu .logo{
+        padding: 0;
+    }
+
+    .menu-button-links .signIn, .menu-button-links .register{
+        font-size: 10px;
+    }
+
+    main #central-page, .primary-bg{
+        width: 100vw;
+        height:100vh;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #central-page .centralize{
+        margin: 0;
+        padding: 0;
+        width: 50vh;
+    }
+
+    #central-page .divisoes-logo img{
+        max-width: 100%;
+        height: auto;
+    }
+
+    main #central-page .centralize h1{
+        font-size: 2rem;
+        margin:1rem 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+
+    main #central-page .destaque{
+        font-size: 2.5rem;
+    }
+
+    main #central-page #divisor{
+        border-bottom: 3px solid rgba(255, 0, 229, 0.5);
+    }
+
+    main #central-page h2{
+        margin: 1rem 0;
+        font-size: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .centralize h2 .mensalidade{
+        font-size: 1.5rem;
+    }
+
+    .centralize h3{
+        margin: 2rem 0;
+        width: 100%;
+        font-size: .625rem;
+    }
+
+    #tipos-planos{
+        padding: 0;
+    }
+
+    #tipos-planos #tipos-planos-section{
+        margin: 0;
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    #tipos-planos #tipos-planos-section h3{
+        padding: 1rem 2rem;
+        margin: 0;
+    }
+
+    #tipos-planos #tipos-planos-section #cards-centralize{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        animation: none;
+    }
+
+    #tipos-planos #tipos-planos-section #cards-centralize .card{
+        margin: 0;
+        width: 60%;
+        height: fit-content;
+        margin-bottom: 5rem;
+        transform: rotateY(0deg);
+        transition: 0;
+    }
+
+    #tipos-planos #tipos-planos-section #cards-centralize .card .card-detalhes{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 1rem;
+    }
+    #cards-centralize .card .card-detalhes .destaque-rosa{
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+    #cards-centralize .card .card-beneficios ul{
+        margin: 0;
+        margin-bottom: 3rem;
+    }
+
+    #cards-centralize .card .card-beneficios ul li{
+        font-size: .825rem;
+    }
+
+    .assine-button{
+        transition-duration: 0.4s;
+    }
+
+    .assine-button:hover{
+        box-shadow: -1px 0px 20px 10px white;
+    }
+
+    #rotate-right:hover ~ #rotate-left{
+        transform: rotateY(0deg);
+        transition: 0;
+    }
+
+    #mostruario-filmes{
+        margin: 0;
+        padding: 0;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 5rem;
+    }
+
+    #mostruario-filmes h3{
+        margin: 0;
+        padding-bottom: 2rem;
+    }
+
+    #centralize-filmes{
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #centralize-filmes div{
+        width: 100%;
+        height: 60vh;
+    }
+
+    footer{
+        width: 100%;
+        height: 100%;
+    }
+
+    footer nav ul{
+        display: flex;
+        flex-wrap: wrap;
+        grid-template-rows: repeat(2, 1fr);
+        margin: 0;
+        padding-top: 2rem;
+    }
+
+    footer nav .others li{
+        margin: 0;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    footer nav ul a{
+        width: fit-content;
+        margin: 0;
+    }
+
+    footer p{
+        font-size: .725rem;
+    }
+
+    footer .redes-sociais{
+        padding: 2rem 0;
+    }
+}
